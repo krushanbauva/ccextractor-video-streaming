@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name=description" content="A video streaming platform with subtitle support">
+		<meta name="keywords" content="video streaming, youtube streams, subtitle support, subtitle processing">
+		<meta name="author" content="Krushan Bauva">
+		<title>CCExtractor's video streaming platform | Player</title>
+		<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+	</head>
+	<body>
+	
+		<div class="header">
+			<h1><span class="highlight">CCExtractor</span>'s video streaming platform</h1>
+		</div>
+		
+		<div class="nav">
+			<ul>
+				<li><a href="{{ url_for('index') }}">Youtube Streams</a></li>
+				<li><a href="{{ url_for('addyoutubestreams') }}">Add Youtube Streams</a></li>
+				<li><a href="{{ url_for('directplay') }}">Direct Play</a></li>
+				<li><a class="current" href="{{ url_for('directplay') }}">Player</a></li>
+			</ul>
+		</div>
+		
+		<div class="player">
+			<iframe src="https://www.youtube.com/embed/{{ add }}" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+		</div>
+		
+		<div class="footer">
+			<p>CCExtractor's video streaming platform, Copyright &copy; 2018</p>
+		</div>
+		
+	</body>
+</html>
