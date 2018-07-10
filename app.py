@@ -36,7 +36,7 @@ def streamadded():
 		videoID = videoID[:j]
 	#videoID, description
 	links[videoID] = description
-	return render_template('addyoutubestreams.html')
+	return addyoutubestreams()
 
 @app.route('/removeyoutubestreams')
 def removeyoutubestreams():
