@@ -83,6 +83,8 @@ body{
 .youtubestreams div.desc {
 	padding: 5px;
 	text-align: center;
+	overflow: auto;
+	height:40px;
 }
 
 .youtubestreams * {
@@ -90,6 +92,7 @@ body{
 }
 
 .youtubestreams .responsive {
+	margin:5px 0px;
 	padding:0 6px;
 	float:left;
 	width:24.99%;
