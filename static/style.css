@@ -168,21 +168,24 @@ body{
 
 @media only screen and (max-width: 700px) {
 	.header {
-		margin-left:30%;
-		width:70%;
+		margin-left:25%;
+		width:75%;
+	}
+	.header h1 {
+		font-size:25px;
 	}
 	.nav ul {
-		width:30%;
+		width:25%;
 	}
 	.youtubestreams {
-		margin-left:30%;
+		margin-left:25%;
 	}
 	.youtubestreams .responsive {
 		width: 49.99999%;
 		margin: 6px 0;
 	}
 	.player {
-		margin-left:30%;
+		margin-left:25%;
 	}
 	.player iframe {
 		top:0;
@@ -191,13 +194,13 @@ body{
 		height:100%;
 	}
 	.forms {
-		margin-left:30%;
+		margin-left:25%;
 	}
 	.indexfooter p{
-		margin-left:20%;
+		margin-left:15%;
 	}
 	.footer p{
-		margin-left:20%;
+		margin-left:15%;
 	}
 }
 
