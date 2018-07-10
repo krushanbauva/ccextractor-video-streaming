@@ -1,7 +1,7 @@
 from flask import Flask, render_template, request
 app = Flask(__name__)
 
-links = {'BS6SSngNsJ0':"Euronews English Live", 'X7Ktabhd8a4':"Aaj Tak LIVE TV", 'iL3Bg-ChVqw':"BEST POP SONGS WORLD 2018 (ED SHEERAN CHARLIE PUTH BRUNO MARS) THE BEST SPOTIFY PLAYLIST - LIVE 24/7", 'NH-r7Psb34w':"Goodbye - Julian Martel", 'y2xQzzXngJo':"Maroon 5 GRANDES EXITOS Cubierta completa 2017 - Lo Mejor De Maroon 5 2017", 'AqcT8uYM0c4':"Charlie Puth - Songs You Might Not Have Heard", 'xS6pwQ1Gs2s':"ChillYourMind Radio • 24/7 Music Live Stream | Deep & Tropical House | Chill Music, Dance Music, EDM", 'Z-2khcTHIgs':"5 Biggest Tsunami Caught On Camera", 'mArSMOz8VZM':"A Tour of IIT Madras - Campus Life 2018", 'ALiqSY-8JQY':"Owl City - This Isn't The End"}
+links = {'BS6SSngNsJ0':"Euronews English Live", 'X7Ktabhd8a4':"Aaj Tak LIVE TV", 'iL3Bg-ChVqw':"BEST POP SONGS WORLD 2018 - LIVE 24/7", 'NH-r7Psb34w':"Goodbye - Julian Martel", 'y2xQzzXngJo':"Maroon 5 GRANDES EXITOS 2017", 'AqcT8uYM0c4':"Charlie Puth - Songs You Might Not Have Heard", 'xS6pwQ1Gs2s':"ChillYourMind Radio • 24/7 Music Live Stream", 'Z-2khcTHIgs':"5 Biggest Tsunami Caught On Camera", 'mArSMOz8VZM':"A Tour of IIT Madras - Campus Life 2018", 'ALiqSY-8JQY':"Owl City - This Isn't The End"}
 
 @app.route('/')
 def index():
