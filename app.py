@@ -37,8 +37,20 @@ def streamadded():
 	#videoID, description
 	links[videoID] = description
 	return render_template('addyoutubestreams.html')
-	
-	
-	
-	
-	
+
+@app.route('/removeyoutubestreams')
+def removeyoutubestreams():
+	return render_template('removeyoutubestreams.html')
+
+@app.route('/streamremoved')
+def streamremoved():
+	address = request.args.get('address')
+	i = address.find('youtube.com/watch?v=')
+	videoID = address[i+20:]
+	j = videoID.find('&')
+	if j!=-1 :
+		videoID = videoID[:j]
+	if videoID in links:
+		del links[videoID]
+	return removeyoutubestreams()
+

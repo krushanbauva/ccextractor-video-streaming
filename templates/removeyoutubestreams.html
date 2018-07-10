@@ -6,7 +6,7 @@
 		<meta name="description" content="A video streaming platform with subtitle support">
 		<meta name="keywords" content="video streaming, youtube streams, subtitle support, subtitle processing">
 		<meta name="author" content="Krushan Bauva">
-		<title>CCExtractor's video streaming platform | Player</title>
+		<title>CCExtractor's video streaming platform | Remove Youtube Streams</title>
 		<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 	</head>
 	<body>
@@ -19,14 +19,17 @@
 			<ul>
 				<li><a href="{{ url_for('index') }}">Youtube Streams</a></li>
 				<li><a href="{{ url_for('addyoutubestreams') }}">Add Youtube Streams</a></li>
-				<li><a href="{{ url_for('removeyoutubestreams') }}">Remove Youtube Streams</a></li>
+				<li><a class="current" href="{{ url_for('removeyoutubestreams') }}">Remove Youtube Streams</a></li>
 				<li><a href="{{ url_for('directplay') }}">Direct Play</a></li>
-				<li><a class="current" href="{{ url_for('directplay') }}">Player</a></li>
+				<li><a href="{{ url_for('directplay') }}">Player</a></li>
 			</ul>
 		</div>
 		
-		<div class="player">
-			<iframe src="https://www.youtube.com/embed/{{ add }}" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+		<div class="forms">
+			<form action="{{url_for('streamremoved')}}">
+				<input type="url" name="address" placeholder="Enter a valid youtube URL..." required>
+				<input type="submit" value="submit">
+			</form>
 		</div>
 		
 		<div class="footer">
