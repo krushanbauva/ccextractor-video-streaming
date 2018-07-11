@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, redirect, url_for
 from werkzeug.security import generate_password_hash, check_password_hash
 
 app = Flask(__name__)
@@ -47,7 +47,7 @@ def streamadded():
 			videoID = videoID[:j]
 		#videoID, description
 		links[videoID] = description
-	return addyoutubestreams()
+	return redirect(url_for('addyoutubestreams'))
 
 @app.route('/removeyoutubestreams')
 def removeyoutubestreams():
@@ -66,5 +66,5 @@ def streamremoved():
 			videoID = videoID[:j]
 		if videoID in links:
 			del links[videoID]
-	return removeyoutubestreams()
+	return redirect(url_for('removeyoutubestreams'))
 
